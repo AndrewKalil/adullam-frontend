@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"],
+      "~components": ["src/components"],
+      "~components/*": ["src/components/*"],
+      "~hooks": ["src/hooks"],
+      "~hooks/*": ["src/hooks/*"],
+      "~utils": ["src/utils"],
+      "~utils/*": ["src/utils/*"],
+      "~constants": ["src/constants"],
+      "~constants/*": ["src/constants/*"],
+      "~pages": ["src/pages"],
+      "~pages/*": ["src/pages/*"],
+      "~providers": ["src/providers"],
+      "~providers/*": ["src/providers/*"],
+      "~integrations": ["src/integrations"],
+      "~integrations/*": ["src/integrations/*"],
+      "~services": ["src/services"],
+      "~services/*": ["src/services/*"],
+      "~types": ["src/types"],
+      "~types/*": ["src/types/*"]
+    }
+  },
+  "include": ["src"]
+}
