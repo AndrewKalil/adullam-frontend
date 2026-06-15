@@ -1,0 +1,39 @@
+.root {
+  @apply bg-white rounded-xl border border-gray-200 p-6 flex items-center gap-4;
+
+  :global(.dark) & {
+    @apply bg-gray-800 border-gray-700;
+  }
+}
+
+.iconWrapper {
+  @apply flex-shrink-0 w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center;
+
+  :global(.dark) & {
+    @apply bg-blue-900/20;
+  }
+}
+
+.content {
+  @apply flex flex-col gap-1;
+}
+
+.label {
+  @apply text-sm text-gray-500;
+
+  :global(.dark) & {
+    @apply text-gray-400;
+  }
+}
+
+.count {
+  @apply text-2xl font-semibold text-gray-900;
+
+  :global(.dark) & {
+    @apply text-white;
+  }
+}
+
+.error {
+  @apply text-sm text-red-500;
+}
