@@ -3,6 +3,8 @@ import { formatDateTime } from "@kalortech/shared-logic";
 import { Button, Tag } from "antd";
 import { Pencil, Trash2 } from "lucide-react";
 
+import { DISCOUNT_TYPE_PERCENTAGE } from "~services";
+
 import styles from "./PromoCodeCard.module.scss";
 import type { PromoCodeCardProps } from "./PromoCodeCard.types";
 
@@ -13,7 +15,7 @@ export const PromoCodeCard = (props: PromoCodeCardProps) => {
   const onDeleteHandler = useCallback(() => onDelete(promoCode), [promoCode, onDelete]);
 
   const discountLabel =
-    promoCode.discountType === "percentage"
+    promoCode.discountType === DISCOUNT_TYPE_PERCENTAGE
       ? `${promoCode.discountValue}% off`
       : `$${Number(promoCode.discountValue).toFixed(2)} off`;
 

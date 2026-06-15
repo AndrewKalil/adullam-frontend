@@ -3,7 +3,7 @@ import type { DiscountType, PromoCode, PromoCodeInsert } from "~services";
 export interface PromoCodeDrawerProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: (values: PromoCodeInsert) => void;
+  onSubmit: (values: PromoCodeInsert) => void | Promise<void>;
   isSubmitting: boolean;
   initialValues?: PromoCode;
 }

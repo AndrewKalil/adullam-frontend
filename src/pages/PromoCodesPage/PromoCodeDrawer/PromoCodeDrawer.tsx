@@ -11,6 +11,7 @@ import {
 } from "@kalortech/shared-components";
 import { useFormik } from "@kalortech/shared-logic";
 
+import { DISCOUNT_TYPE_PERCENTAGE } from "~services";
 import type { PromoCodeInsert } from "~services";
 
 import { DISCOUNT_TYPE_OPTIONS, PROMO_CODE_INITIAL_VALUES, PROMO_CODE_SCHEMA } from "./PromoCodeDrawer.constants";
@@ -93,7 +94,7 @@ export const PromoCodeDrawer = (props: PromoCodeDrawerProps) => {
         </FormControlLabel>
 
         <FormControlLabel layout="vertical" label="Discount Value" name="discountValue" required>
-          {discountType === "percentage" ? (
+          {discountType === DISCOUNT_TYPE_PERCENTAGE ? (
             <PercentageInput name="discountValue" value={discountValue ?? undefined} onChange={onChange} error={discountValueError} />
           ) : (
             <CurrencyInput name="discountValue" value={discountValue ?? undefined} onChange={onChange} error={discountValueError} />
