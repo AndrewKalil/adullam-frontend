@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@kalortech/eslint-config": "^1.5.0",
-    "@kalortech/shared-components": "^2.2.2",
+    "@kalortech/shared-components": "^2.2.3",
     "@kalortech/shared-logic": "^1.8.0",
     "@tanstack/react-query": "^5.101.0",
     "antd": "^6.4.4",
