@@ -5,6 +5,7 @@ import { message } from "antd";
 
 import {
   CATEGORIES_QUERY_KEYS,
+  LOGS_QUERY_KEYS,
   PRODUCTS_QUERY_KEYS,
   createCategory,
   deleteCategory,
@@ -35,6 +36,7 @@ export const useCategoriesApi = () => {
 
   const invalidateCategories = useCallback(() => {
     void queryClient.invalidateQueries({ queryKey: CATEGORIES_QUERY_KEYS.all });
+    void queryClient.invalidateQueries({ queryKey: LOGS_QUERY_KEYS.all });
   }, [queryClient]);
 
   const { mutateAsync: createCategoryAsync, isPending: isCreating } = useMutation({

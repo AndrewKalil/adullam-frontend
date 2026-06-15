@@ -4,6 +4,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { message } from "antd";
 
 import {
+  LOGS_QUERY_KEYS,
   PROMO_CODES_QUERY_KEYS,
   createPromoCode,
   deletePromoCode,
@@ -28,6 +29,7 @@ export const usePromoCodesApi = () => {
 
   const invalidatePromoCodes = useCallback(() => {
     void queryClient.invalidateQueries({ queryKey: PROMO_CODES_QUERY_KEYS.all });
+    void queryClient.invalidateQueries({ queryKey: LOGS_QUERY_KEYS.all });
   }, [queryClient]);
 
   const { mutateAsync: createPromoCodeAsync, isPending: isCreating } = useMutation({

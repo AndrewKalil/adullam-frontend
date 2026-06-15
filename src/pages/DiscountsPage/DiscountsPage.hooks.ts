@@ -6,6 +6,7 @@ import { message } from "antd";
 import {
   CATEGORIES_QUERY_KEYS,
   DISCOUNTS_QUERY_KEYS,
+  LOGS_QUERY_KEYS,
   PRODUCTS_QUERY_KEYS,
   createDiscount,
   deleteDiscount,
@@ -51,6 +52,7 @@ export const useDiscountsApi = () => {
   const invalidateDiscounts = useCallback(() => {
     void queryClient.invalidateQueries({ queryKey: DISCOUNTS_QUERY_KEYS.all });
     void queryClient.invalidateQueries({ queryKey: PRODUCTS_QUERY_KEYS.all });
+    void queryClient.invalidateQueries({ queryKey: LOGS_QUERY_KEYS.all });
   }, [queryClient]);
 
   const { mutateAsync: createDiscountAsync, isPending: isCreating } =
