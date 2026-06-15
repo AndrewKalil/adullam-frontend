@@ -1,0 +1,39 @@
+.root {
+  @apply bg-white border border-gray-200 rounded-xl overflow-hidden;
+
+  :global(.dark) & {
+    @apply bg-gray-800 border-gray-700;
+  }
+}
+
+.body {
+  @apply p-4 flex flex-col gap-2;
+}
+
+.header {
+  @apply flex items-start justify-between gap-2;
+}
+
+.name {
+  @apply font-medium text-gray-900;
+
+  :global(.dark) & {
+    @apply text-white;
+  }
+}
+
+.actions {
+  @apply flex gap-1 flex-shrink-0;
+}
+
+.meta {
+  @apply flex items-center gap-2;
+}
+
+.percentage {
+  @apply text-2xl font-bold text-blue-600;
+}
+
+.dates {
+  @apply text-xs text-gray-400;
+}
