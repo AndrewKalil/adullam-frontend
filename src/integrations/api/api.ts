@@ -55,6 +55,7 @@ instance.interceptors.response.use(
           const { data } = await axios.post<RefreshResponse>(
             `${API_BASE_URL}${ApiEndpoint.AuthRefresh}`,
             { refreshToken: storedRefreshToken },
+            { headers: { "x-tenant-slug": TENANT_SLUG } },
           );
           localStorage.setItem(ACCESS_TOKEN_KEY, data.accessToken);
           localStorage.setItem(REFRESH_TOKEN_KEY, data.refreshToken);
