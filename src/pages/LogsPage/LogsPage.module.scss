@@ -1,0 +1,15 @@
+.root {
+  @apply p-6 flex flex-col gap-4 h-full overflow-hidden;
+}
+
+.tableWrapper {
+  @apply flex-1 min-h-0 overflow-hidden;
+}
+
+.loading {
+  @apply flex items-center justify-center p-12;
+}
+
+.pagination {
+  @apply flex justify-center py-2;
+}

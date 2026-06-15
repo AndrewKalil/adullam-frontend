@@ -1,4 +1,4 @@
-import { LayoutDashboard, Package, Percent, Tag, Ticket } from "lucide-react";
+import { LayoutDashboard, Package, Percent, ScrollText, Tag, Ticket } from "lucide-react";
 import type { AppShellNavItem } from "@kalortech/shared-components";
 
 import { AppRoute } from "~constants";
@@ -33,5 +33,11 @@ export const NAV_ITEMS: AppShellNavItem[] = [
     label: "Promo Codes",
     path: AppRoute.PromoCodes,
     icon: Ticket,
+  },
+  {
+    key: "logs",
+    label: "Activity Logs",
+    path: AppRoute.Logs,
+    icon: ScrollText,
   },
 ];

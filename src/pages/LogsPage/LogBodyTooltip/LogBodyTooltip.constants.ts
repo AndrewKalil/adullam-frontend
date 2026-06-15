@@ -1,0 +1,31 @@
+export const EXCLUDED_FIELDS = new Set([
+  "id",
+  "created_at",
+  "updated_at",
+  "deleted_at",
+  "tenant_id",
+]);
+
+export const FIELD_LABEL_MAP: Record<string, string> = {
+  category_id: "Category",
+  is_available: "Available",
+  image_url: "Image URL",
+  price: "Price",
+  name: "Name",
+  description: "Description",
+  code: "Code",
+  discount_type: "Discount Type",
+  discount_value: "Discount Value",
+  min_order_amount: "Min Order Amount",
+  max_uses: "Max Uses",
+  use_count: "Use Count",
+  expires_at: "Expires At",
+  is_active: "Active",
+  percentage: "Percentage",
+  scope: "Scope",
+  start_date: "Start Date",
+  end_date: "End Date",
+  color: "Color",
+  discount_id: "Discount",
+  product_id: "Product",
+};

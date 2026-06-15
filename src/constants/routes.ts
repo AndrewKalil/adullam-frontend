@@ -5,4 +5,5 @@ export enum AppRoute {
   Products = "/products",
   Discounts = "/discounts",
   PromoCodes = "/promo-codes",
+  Logs = "/logs",
 }

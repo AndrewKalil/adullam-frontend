@@ -22,4 +22,7 @@ export enum ApiEndpoint {
 
   // Uploads
   UploadsSign = "/api/v1/uploads/sign",
+
+  // Logs
+  Logs = "/api/v1/logs",
 }

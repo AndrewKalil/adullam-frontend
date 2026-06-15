@@ -1,0 +1,11 @@
+.list {
+  @apply list-none p-0 m-0 flex flex-col gap-1 max-h-64 overflow-y-auto text-xs;
+}
+
+.fieldLabel {
+  @apply font-semibold;
+}
+
+.preview {
+  @apply cursor-help underline decoration-dotted;
+}
