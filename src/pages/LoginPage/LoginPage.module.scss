@@ -1,0 +1,19 @@
+.root {
+  @apply min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900;
+}
+
+.card {
+  @apply w-full max-w-sm bg-white dark:bg-gray-800 rounded-xl shadow-sm p-8;
+}
+
+.title {
+  @apply text-2xl font-semibold text-gray-900 dark:text-white mb-6;
+}
+
+.form {
+  @apply flex flex-col gap-4;
+}
+
+.submitButton {
+  @apply mt-2 w-full;
+}
