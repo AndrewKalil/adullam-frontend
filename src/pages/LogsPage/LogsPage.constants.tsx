@@ -6,6 +6,7 @@ import { LOG_ACTION_CREATE, LOG_ACTION_DELETE, LOG_ACTION_UPDATE } from "~servic
 import type { LogEntry } from "~services";
 
 import { LogBodyTooltip } from "./LogBodyTooltip";
+import { LogItemTooltip } from "./LogItemTooltip";
 import { humanizeEntityType } from "./LogsPage.utils";
 
 const ACTION_COLOR_MAP: Record<string, string> = {
@@ -39,6 +40,18 @@ export const LOGS_TABLE_COLUMNS: TableColumnsType<LogEntry> = [
     key: "entityType",
     render: (_, row) => humanizeEntityType(row.entityType),
     width: 140,
+  },
+  {
+    title: "Item",
+    key: "item",
+    render: (_, row) => (
+      <LogItemTooltip
+        body={row.body}
+        action={row.action}
+        entityType={row.entityType}
+        entityId={row.entityId}
+      />
+    ),
   },
   {
     title: "Changes",
