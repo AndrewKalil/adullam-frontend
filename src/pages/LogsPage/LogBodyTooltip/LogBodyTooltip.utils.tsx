@@ -39,8 +39,7 @@ export const getChangedFields = (
 export const formatFieldValue = (value: unknown): string => {
   if (value === null || value === undefined) return "--";
   if (typeof value === "boolean") return value ? "Yes" : "No";
-  const str = String(value);
-  return str.length > 40 ? `${str.slice(0, 40)}...` : str;
+  return String(value);
 };
 
 export const getCellPreview = (
