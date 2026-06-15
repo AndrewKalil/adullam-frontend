@@ -1,3 +1,15 @@
+export interface ProductCategory {
+  name: string;
+  color: string | null;
+  description: string | null;
+}
+
+export interface ProductDiscount {
+  id: string;
+  name: string;
+  percentage: number;
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -6,6 +18,8 @@ export interface Product {
   imageUrl: string | null;
   isAvailable: boolean;
   categoryId: string | null;
+  category: ProductCategory | null;
+  discount: ProductDiscount | null;
   createdAt: string;
   updatedAt: string;
 }

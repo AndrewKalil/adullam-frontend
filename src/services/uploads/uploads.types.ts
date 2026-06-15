@@ -4,6 +4,6 @@ export interface SignedUploadRequest {
 }
 
 export interface SignedUploadResponse {
-  uploadUrl: string;
+  signedUrl: string;
   publicUrl: string;
 }
