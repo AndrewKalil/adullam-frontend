@@ -5,6 +5,7 @@ import { message } from "antd";
 
 import {
   CATEGORIES_QUERY_KEYS,
+  PRODUCTS_QUERY_KEYS,
   createCategory,
   deleteCategory,
   getCategories,
@@ -51,6 +52,7 @@ export const useCategoriesApi = () => {
       updateCategory(options),
     onSuccess: () => {
       invalidateCategories();
+      void queryClient.invalidateQueries({ queryKey: PRODUCTS_QUERY_KEYS.all });
       void message.success("Category updated");
       onCloseDrawer();
     },

@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Restore list styles stripped by Tailwind preflight — used by MdEditor readonly output */
+.md-tooltip {
+  font-size: 0.75rem;
+  line-height: 1.4;
+
+  p, li {
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+    margin: 0;
+  }
+
+  ol {
+    list-style-type: decimal;
+    padding-left: 1.25rem;
+    margin: 0;
+  }
+}
