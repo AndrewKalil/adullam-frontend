@@ -16,6 +16,12 @@ import {
 
 import type { ApiErrorData, RefreshResponse } from "./api.types";
 
+let logoutCallback: (() => void) | null = null;
+
+export const setLogoutCallback = (callback: (() => void) | null) => {
+  logoutCallback = callback;
+};
+
 const instance = axios.create({
   baseURL: API_BASE_URL,
   headers: { "Content-Type": "application/json" },
@@ -58,6 +64,7 @@ instance.interceptors.response.use(
           localStorage.removeItem(ACCESS_TOKEN_KEY);
           localStorage.removeItem(REFRESH_TOKEN_KEY);
           localStorage.removeItem(AUTH_USER_KEY);
+          logoutCallback?.();
           return Promise.reject(
             new Error("Session expired. Please log in again."),
           );

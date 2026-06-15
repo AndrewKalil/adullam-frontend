@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { ACCESS_TOKEN_KEY, AUTH_USER_KEY, REFRESH_TOKEN_KEY } from "~constants";
+import { setLogoutCallback } from "~integrations";
 import { logout } from "~services";
 import type { AuthTokens, AuthUser } from "~services";
 
@@ -21,6 +22,14 @@ export const AuthProvider = (props: AuthProviderProps) => {
       setUser(JSON.parse(storedUser) as AuthUser);
     }
     setIsLoading(false);
+  }, []);
+
+  useEffect(() => {
+    setLogoutCallback(() => {
+      setAccessToken(null);
+      setUser(null);
+    });
+    return () => setLogoutCallback(null);
   }, []);
 
   const onLoginHandler = useCallback((tokens: AuthTokens, authUser: AuthUser) => {
