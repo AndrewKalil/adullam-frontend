@@ -1,0 +1,19 @@
+.root {
+  @apply p-6 flex flex-col gap-6;
+}
+
+.productsGrid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4;
+}
+
+.pagination {
+  @apply flex justify-center;
+}
+
+.loading {
+  @apply flex items-center justify-center p-12;
+}
+
+.emptyState {
+  @apply flex flex-col items-center justify-center py-16 text-gray-400;
+}
