@@ -1,0 +1,39 @@
+.root {
+  @apply bg-white border border-gray-200 rounded-xl p-5 flex items-start justify-between gap-3;
+
+  :global(.dark) & {
+    @apply bg-gray-800 border-gray-700;
+  }
+}
+
+.info {
+  @apply flex items-start gap-3;
+}
+
+.colorDot {
+  @apply mt-1 w-3 h-3 rounded-full flex-shrink-0;
+}
+
+.details {
+  @apply flex flex-col gap-1;
+}
+
+.name {
+  @apply font-medium text-gray-900;
+
+  :global(.dark) & {
+    @apply text-white;
+  }
+}
+
+.description {
+  @apply text-sm text-gray-500;
+
+  :global(.dark) & {
+    @apply text-gray-400;
+  }
+}
+
+.actions {
+  @apply flex items-center gap-1 flex-shrink-0;
+}
