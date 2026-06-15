@@ -1,1 +1,1 @@
-// Providers barrel — exports added per ticket
+export * from "./AuthProvider";

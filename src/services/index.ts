@@ -1,1 +1,1 @@
-// Services barrel — exports added per ticket
+export * from "./auth";
